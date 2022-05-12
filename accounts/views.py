@@ -97,7 +97,7 @@ def dashboard(request):
 
     if len(descricao) < 5:
         messages.error(request, 'Descricao precisa ter mais que 5 caracteres.')
-        form = FormContato(request.Post)
+        form = FormContato(request.POST)
         return render(request, 'accounts/dashboard.html', {'form': form})
 
     form.save()
